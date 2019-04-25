@@ -1,3 +1,3 @@
 这是一个测试文件
 
-Creating a new branch is quick.
+Creating a new branch is quick AND simple.
