@@ -4,4 +4,4 @@ this is we the win
 
 this  is a  test install
 
-this is one  test oneli script
+this is one  test  script
