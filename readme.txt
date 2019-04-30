@@ -1,4 +1,7 @@
 this is tow the test n this is three test
 
-cat git 
-git log --oneline 
+this is we the win 
+
+this  is a  test install
+
+this is one  test oneli script
