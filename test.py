@@ -155,12 +155,12 @@ sleep(3)
 #coding=utf-8
 #-*- coding:utf-8 -*-
 
-from selenium import webdriver
-from time import  sleep
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.alert import Alert
-import os
+# from selenium import webdriver
+# from time import  sleep
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.common.alert import Alert
+# import os
 # drive.get("http:/www.baidu.com")
 # print ("浏览器最大化")
 # drive.maximize_window()
@@ -245,31 +245,56 @@ import os
 #
 #==============百度登录============================================
 
-baidu_url = "http://www.baidu.com"
-driver  = webdriver.Chrome()
-driver.get(baidu_url)
-#=============点击登录链接======================
-driver.find_element_by_xpath('//*[@id="u1"]/a[7]').click()
-print (driver.current_url)
-
-sleep(3)
+# baidu_url = "http://www.baidu.com"
+# driver  = webdriver.Chrome()
+# driver.get(baidu_url)
+# #=============点击登录链接======================
+# driver.find_element_by_xpath('//*[@id="u1"]/a[7]').click()
+# print (driver.current_url)
+#
+# sleep(3)
 
 #通过二次定位找到用户名输入框
-driver.find_element_by_class_name("tang-pass-footerBar").find_element_by_id("TANGRAM__PSP_10__footerULoginBtn").click()
-driver.find_element_
+# driver.find_element_by_class_name("tang-pass-footerBar").find_element_by_id("TANGRAM__PSP_10__footerULoginBtn").click()
+
 
 
 # driver.find_element_by_css_selector("#TANGRAM__PSP_10__footerULoginBtn")
 # div = driver.find_element_by_class_name("pass-login-pop-form").find_element_by_name("tang-pass-footerBarULogin pass-link")
 # div.click()
-sleep(2)
-
-driver.quit()
+# sleep(2)
+#
+# driver.quit()
 # div=driver.find_element_by_class_name("tang-content").find_element_by_name("userName")
 # div.send_keys("username")
 # #输入登录密码
 # driver.find_element_by_name("password").send_keys("password")
 # #点击登录
 # driver.find_element_by_id("TANGRAM__PSP_10__submit").click()
-
-
+# a=347.91+705.26+176.81
+# b=3.19+100+96+68.83+1.99
+# c=200
+# print (a)
+# print(a-b)
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+#发送邮箱
+sender = 'a'
+#接收邮箱
+receiver ='b'
+#发送邮件主题
+subject = 'python email test'
+#发送邮箱服务器
+smtpserver = 'smtp.126.com'
+#发送邮箱用户/密码
+username = 'name'
+password = 'pwd'
+#中文需参数‘utf-8’，单字节字符不需要
+msg =MIMEText('hello pytthon','text','uft-8')
+msg ['Subject'] = Header(subject,'utf-8')
+smtp = smtplib.SMTP()
+smtp.connect('smtp.126.com')
+smtp.login(username,password)
+smtp.sendmail(sender,receiver,msg.as_string())
+smtp.quit()
